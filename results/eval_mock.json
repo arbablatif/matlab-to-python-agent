@@ -1,0 +1,211 @@
+[
+  {
+    "name": "signal_filtering",
+    "mode": "reference",
+    "provider": "mock",
+    "model": "mock",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": false,
+        "n_tests": 7,
+        "n_failed": 3,
+        "failures": [
+          "test_output_matches_matlab[y]: AssertionError: y: max abs error 5.297e-02 exceeds rtol=1e-06, atol=1e-09; first values got=[0.18845601 0.19411846 0.20141352 0.21033873] expected=[0.13962456 0.16276044 0.18576978 0.20865186]",
+          "test_output_matches_matlab[rms_error]: AssertionError: rms_error: max abs error 1.872e-03 exceeds rtol=1e-06, atol=1e-09; first values got=[0.02454167] expected=[0.02641404]",
+          "test_output_matches_matlab[max_dev]: AssertionError: max_dev: max abs error 2.647e-02 exceeds rtol=1e-06, atol=1e-09; first values got=[0.31457555] expected=[0.34104144]"
+        ],
+        "cached": true
+      },
+      {
+        "number": 2,
+        "passed": true,
+        "n_tests": 7,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "sin",
+      "cos",
+      "butter",
+      "filter",
+      "filtfilt",
+      "sqrt",
+      "mean",
+      "max",
+      "abs",
+      "finddelay"
+    ],
+    "missing_comments": [],
+    "python_path": "out/mock/signal_filtering/signal_filtering.py",
+    "test_path": "out/mock/signal_filtering/test_signal_filtering.py",
+    "seconds": 8.9,
+    "n_attempts": 2,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "fft_analysis",
+    "mode": "reference",
+    "provider": "mock",
+    "model": "mock",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 7,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "sin",
+      "cos",
+      "fft",
+      "abs",
+      "max",
+      "findpeaks",
+      "sum"
+    ],
+    "missing_comments": [],
+    "python_path": "out/mock/fft_analysis/fft_analysis.py",
+    "test_path": "out/mock/fft_analysis/test_fft_analysis.py",
+    "seconds": 4.6,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "matrix_ops",
+    "mode": "reference",
+    "provider": "mock",
+    "model": "mock",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": false,
+        "n_tests": 15,
+        "n_failed": 5,
+        "failures": [
+          "test_output_matches_matlab[B]: AssertionError: B: max abs error 6.000e+00 exceeds rtol=1e-06, atol=1e-09; first values got=[1. 2. 3. 4.] expected=[ 1.  4.  7. 10.]",
+          "test_output_matches_matlab[B_flat]: AssertionError: B_flat: max abs error 6.000e+00 exceeds rtol=1e-06, atol=1e-09; first values got=[1. 5. 9. 2.] expected=[1. 2. 3. 4.]",
+          "test_output_matches_matlab[sub]: AssertionError: sub: max abs error 6.000e+00 exceeds rtol=1e-06, atol=1e-09; first values got=[ 5.  8.  9. 12.] expected=[ 2. 11.  3. 12.]",
+          "test_output_matches_matlab[cs]: AssertionError: cs: max abs error 1.200e+01 exceeds rtol=1e-06, atol=1e-09; first values got=[ 1.  3.  6. 10.] expected=[ 1.  5. 12. 22.]",
+          "test_output_matches_matlab[row_max]: AssertionError: row_max: max abs error 6.000e+00 exceeds rtol=1e-06, atol=1e-09; first values got=[ 4.  8. 12.] expected=[10. 11. 12.]"
+        ],
+        "cached": true
+      },
+      {
+        "number": 2,
+        "passed": true,
+        "n_tests": 15,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "det",
+      "inv",
+      "sort",
+      "eig",
+      "norm",
+      "reshape",
+      "kron",
+      "eye",
+      "trace",
+      "cumsum",
+      "sum",
+      "max",
+      "mldivide"
+    ],
+    "missing_comments": [],
+    "python_path": "out/mock/matrix_ops/matrix_ops.py",
+    "test_path": "out/mock/matrix_ops/test_matrix_ops.py",
+    "seconds": 3.8,
+    "n_attempts": 2,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "ode_solving",
+    "mode": "reference",
+    "provider": "mock",
+    "model": "mock",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 6,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "numel",
+      "zeros",
+      "odeset",
+      "ode45",
+      "sqrt",
+      "exp",
+      "cos",
+      "sin",
+      "max",
+      "abs"
+    ],
+    "missing_comments": [],
+    "python_path": "out/mock/ode_solving/ode_solving.py",
+    "test_path": "out/mock/ode_solving/test_ode_solving.py",
+    "seconds": 2.7,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "plotting",
+    "mode": "reference",
+    "provider": "mock",
+    "model": "mock",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 10,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "linspace",
+      "sin",
+      "cos",
+      "exp",
+      "figure",
+      "subplot",
+      "plot",
+      "legend",
+      "title",
+      "xlabel",
+      "ylabel",
+      "saveas",
+      "trapz",
+      "max",
+      "sum",
+      "abs",
+      "diff",
+      "sign"
+    ],
+    "missing_comments": [],
+    "python_path": "out/mock/plotting/plotting.py",
+    "test_path": "out/mock/plotting/test_plotting.py",
+    "seconds": 1.9,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  }
+]

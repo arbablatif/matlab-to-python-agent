@@ -1,0 +1,22 @@
+{
+  "_comment": "Which MATLAB workspace variables are compared, and per-variable tolerances. Default: rtol=1e-6, atol=1e-9.",
+  "signal_filtering": {
+    "outputs": ["b", "a", "y_causal", "y", "rms_error", "max_dev", "lag_samples"]
+  },
+  "fft_analysis": {
+    "outputs": ["P1", "f", "peak_freq", "pk", "peak_freqs", "total_power", "spectral_power"]
+  },
+  "matrix_ops": {
+    "outputs": ["x", "detA", "Ainv", "ev", "residual", "B", "B_flat", "sub", "K", "C", "D", "tr", "cs", "mask_sum", "row_max"],
+    "tolerances": {"residual": {"rtol": 0, "atol": 1e-10}}
+  },
+  "ode_solving": {
+    "outputs": ["x_rk4", "rk4_end", "energy", "y45_end", "x_exact", "rk4_max_error"],
+    "tolerances": {"y45_end": {"rtol": 1e-6, "atol": 1e-7}, "rk4_max_error": {"rtol": 1e-4, "atol": 1e-12}}
+  },
+  "plotting": {
+    "outputs": ["x", "y1", "y2", "y3", "area_y3", "ymax", "x_at_max", "zero_cross"],
+    "expected_files": ["plotting_output.png"],
+    "figure_axes_lines": [2, 1]
+  }
+}

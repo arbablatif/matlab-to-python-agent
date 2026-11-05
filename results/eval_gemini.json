@@ -1,0 +1,195 @@
+[
+  {
+    "name": "signal_filtering",
+    "mode": "reference",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 7,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "sin",
+      "cos",
+      "butter",
+      "filter",
+      "filtfilt",
+      "sqrt",
+      "mean",
+      "max",
+      "abs",
+      "finddelay"
+    ],
+    "missing_comments": [],
+    "python_path": "out/gemini/signal_filtering/signal_filtering.py",
+    "test_path": "out/gemini/signal_filtering/test_signal_filtering.py",
+    "seconds": 3.5,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "fft_analysis",
+    "mode": "reference",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 7,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "sin",
+      "cos",
+      "fft",
+      "abs",
+      "max",
+      "findpeaks",
+      "sum"
+    ],
+    "missing_comments": [],
+    "python_path": "out/gemini/fft_analysis/fft_analysis.py",
+    "test_path": "out/gemini/fft_analysis/test_fft_analysis.py",
+    "seconds": 3.6,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "matrix_ops",
+    "mode": "reference",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 15,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "det",
+      "inv",
+      "sort",
+      "eig",
+      "norm",
+      "reshape",
+      "kron",
+      "eye",
+      "trace",
+      "cumsum",
+      "sum",
+      "max",
+      "mldivide"
+    ],
+    "missing_comments": [],
+    "python_path": "out/gemini/matrix_ops/matrix_ops.py",
+    "test_path": "out/gemini/matrix_ops/test_matrix_ops.py",
+    "seconds": 1.7,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "ode_solving",
+    "mode": "reference",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": false,
+        "n_tests": 7,
+        "n_failed": 7,
+        "failures": [
+          "all 7 tests: E   SyntaxError: invalid syntax |  | <frozen runpy>:259: SyntaxError"
+        ],
+        "cached": true
+      },
+      {
+        "number": 2,
+        "passed": true,
+        "n_tests": 6,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "numel",
+      "zeros",
+      "odeset",
+      "ode45",
+      "sqrt",
+      "exp",
+      "cos",
+      "sin",
+      "max",
+      "abs"
+    ],
+    "missing_comments": [],
+    "python_path": "out/gemini/ode_solving/ode_solving.py",
+    "test_path": "out/gemini/ode_solving/test_ode_solving.py",
+    "seconds": 4.4,
+    "n_attempts": 2,
+    "comment_coverage": 1.0
+  },
+  {
+    "name": "plotting",
+    "mode": "reference",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "passed": true,
+    "attempts": [
+      {
+        "number": 1,
+        "passed": true,
+        "n_tests": 10,
+        "n_failed": 0,
+        "failures": [],
+        "cached": true
+      }
+    ],
+    "matlab_functions": [
+      "linspace",
+      "sin",
+      "cos",
+      "exp",
+      "figure",
+      "subplot",
+      "plot",
+      "legend",
+      "title",
+      "xlabel",
+      "ylabel",
+      "saveas",
+      "trapz",
+      "max",
+      "sum",
+      "abs",
+      "diff",
+      "sign"
+    ],
+    "missing_comments": [],
+    "python_path": "out/gemini/plotting/plotting.py",
+    "test_path": "out/gemini/plotting/test_plotting.py",
+    "seconds": 1.8,
+    "n_attempts": 1,
+    "comment_coverage": 1.0
+  }
+]
