@@ -1,4 +1,4 @@
-# MATLAB → Python Agent
+# MATLAB to Python Agent: LLM Code Conversion Verified Against Real MATLAB Output
 
 An LLM agent that converts MATLAB `.m` scripts to Python (NumPy / SciPy / Matplotlib). It **checks its own work** by comparing every output variable with values saved from a real MATLAB run, and **retries using the exact test failures** when the numbers don't match.
 
@@ -20,6 +20,8 @@ Code that looks right is not good enough. You need numerical proof.
 3. **Annotated conversion.** The LLM must keep variable names and tag each translated line with `# MATLAB: <function> -> <python>`. The agent verifies that the tags are there ("comment coverage").
 4. **Generated test.** The agent writes a standalone `pytest` file that runs the converted script and compares each variable with `np.allclose`. Tolerances can be set per variable. For plots, it also checks that the output files were written and that each subplot has the right number of lines.
 5. **Retry with feedback.** On failure, the next prompt contains the previous code plus the failing checks, for example `B: max abs error 6.0; got=[1 2 3 4] expected=[1 4 7 10]`. The default is at most 3 attempts.
+
+## Architecture
 
 ```mermaid
 flowchart LR
@@ -134,3 +136,14 @@ cli.py  app.py  evaluate.py  tests/
 - **Small evaluation set.** 5 samples, a single run with temperature 0. This shows that the loop works, not that it would reach 100% on real-world code.
 - **Executes generated code.** Converted scripts run locally in a subprocess with no sandbox. Only convert code you trust.
 - **Coarse syntax-error feedback.** A crash is reported to the model as a traceback summary without the exact line. Pre-checking with `ast.parse` would give it the line number.
+
+## License
+
+The code is MIT licensed. See [LICENSE](LICENSE).
+
+## Related projects
+
+- [dsp-copilot](https://github.com/arbablatif/dsp-copilot): LLM agent for signal processing on CSV and WAV files
+- [analytics-agent](https://github.com/arbablatif/analytics-agent): text-to-SQL agent with guardrails and cited answers
+
+Project page: [https://arbablatif.github.io/projects/matlab-to-python-agent/](https://arbablatif.github.io/projects/matlab-to-python-agent/). More work at [arbablatif.github.io](https://arbablatif.github.io/).

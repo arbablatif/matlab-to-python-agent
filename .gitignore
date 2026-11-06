@@ -5,3 +5,7 @@ __pycache__/
 out/
 *.pyc
 samples/*.png
+
+# Local workspace files, not part of the project
+CLAUDE.md
+.vscode/
